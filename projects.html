@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0e2d42',
+                        orange: '#f08740',
+                    },
+                    fontFamily: {
+                        'bogle': ['"BBH Sans Bogle"', 'sans-serif'],
+                        'outfit': ['"Outfit"', 'sans-serif'],
+                        'vietnam': ['"Be Vietnam Pro"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'card': '0 6px 15px rgba(0, 0, 0, 0.1)',
+                        'card-hover': '0 10px 25px rgba(0, 0, 0, 0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* This handles the state when the JS adds the "visible" class */
+        .work-card.visible {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"/>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+</head>
+<body class="m-0 p-0">
+   
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top !bg-navy shadow-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand !text-white !font-vietnam !font-bold !text-[1.2rem] mt-[0.2rem] lg:pl-[3rem] p-0 flex items-center gap-2" href="index.html" alt="Logo">
+                    <i class="bi bi-bricks text-orange"></i> RK Construction
+                </a>
+            
+                <button class="navbar-toggler d-lg-none !bg-navy !border-navy !text-white" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon grayscale invert brightness-200 contrast-150"></span>
+                </button>
+        
+                <div class="offcanvas offcanvas-end !bg-navy" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"> 
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close !bg-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body !p-0 !pl-4 lg:!p-0">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+         <li class="nav-item"><a class="nav-link !text-white font-vietnam font-bold text-[1.1rem] mt-[0.2rem] hover:!text-orange transition-colors" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link !text-white font-vietnam font-bold text-[1.1rem] mt-[0.2rem] hover:!text-orange transition-colors" href="index.html#about-us">About Us</a></li>
+                            <li class="nav-item"><a class="nav-link !text-white font-vietnam font-bold text-[1.1rem] mt-[0.2rem] hover:!text-orange transition-colors" href="index.html#services">Services</a></li>
+                            <li class="nav-item"><a class="nav-link !text-white font-vietnam font-bold text-[1.1rem] mt-[0.2rem] hover:!text-orange transition-colors" href="index.html#reviews">Reviews</a></li>
+                            <li class="nav-item"><a class="nav-link !text-white font-vietnam font-bold text-[1.1rem] mt-[0.2rem] hover:!text-orange transition-colors" href="projects.html">Projects</a></li>
+                            <li class="nav-item"><a class="nav-link !text-white font-vietnam font-bold text-[1.1rem] mt-[0.2rem] hover:!text-orange transition-colors" href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="bg-gradient-to-br from-white to-white py-[5rem] px-[2rem] font-outfit text-[#0d1b2a] text-center mt-[3rem]" id="our-work">
+        <div class="max-w-[700px] mx-auto mb-[2rem]">
+            <h2 class="text-[2.5rem] md:text-[3rem] mb-[1rem] text-[#565252] relative inline-block font-bogle">
+                Our Work Speaks for Itself
+                <div class="block h-[3px] w-[5rem] mx-auto mt-[1rem] bg-orange rounded-[5px]"></div>
+            </h2>
+            <p class="text-[0.95rem] md:text-[1.2rem] text-black leading-[1.6] mx-auto max-w-[700px] font-outfit">
+                We bring your vision to life — from kitchen remodels to bathroom upgrades, every detail is crafted with precision.
+            </p>
+        </div>
+
+        <div class="grid justify-items-stretch mt-[3rem] max-w-[1200px] mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1.8rem] md:gap-[0.8rem] lg:gap-[4rem]">
+            
+            <div class="work-card group relative w-full rounded-[1rem] overflow-hidden bg-white shadow-card transform translate-y-[30px] opacity-0 transition-all duration-500 hover:-translate-y-[5px] hover:shadow-card-hover" data-aos="fade-up">
+                <img src="images/work.jpeg" alt="Kitchen Remodel" class="w-full h-[220px] md:h-[440px] object-cover block transition-transform duration-500 group-hover:scale-105">
+                <div class="card-overlay absolute inset-0 bg-navy/85 text-white flex flex-col items-center justify-center opacity-0 transition-opacity duration-400 p-[1rem] group-hover:opacity-100">
+                    <h4 class="text-[1.1rem] md:text-[1.3rem] mb-[10px]">Kitchen Remodel</h4>
+                    <p class="text-[0.85rem] md:text-[0.95rem] leading-[1.4] max-w-[90%]">Complete kitchen transformation with updated cabinetry, lighting, and modern finishes.</p>
+                </div>
+            </div>
+
+            <div class="work-card group relative w-full rounded-[1rem] overflow-hidden bg-white shadow-card transform translate-y-[30px] opacity-0 transition-all duration-500 hover:-translate-y-[5px] hover:shadow-card-hover">
+                <img src="images/work2.jpeg" alt="Cabinet Refinishing" class="w-full h-[220px] md:h-[440px] object-cover block transition-transform duration-500 group-hover:scale-105">
+                <div class="card-overlay absolute inset-0 bg-navy/85 text-white flex flex-col items-center justify-center opacity-0 transition-opacity duration-400 p-[1rem] group-hover:opacity-100">
+                    <h4 class="text-[1.1rem] md:text-[1.3rem] mb-[10px]">Cabinet Refinishing</h4>
+                    <p class="text-[0.85rem] md:text-[0.95rem] leading-[1.4] max-w-[90%]">Old cabinets restored to a fresh, modern look using premium paint and craftsmanship.</p>
+                </div>
+            </div>
+
+            <div class="work-card group relative w-full rounded-[1rem] overflow-hidden bg-white shadow-card transform translate-y-[30px] opacity-0 transition-all duration-500 hover:-translate-y-[5px] hover:shadow-card-hover">
+                <img src="images/work7.jpg" alt="Custom Built-in Shelving" class="w-full h-[220px] md:h-[440px] object-cover block transition-transform duration-500 group-hover:scale-105">
+                <div class="card-overlay absolute inset-0 bg-navy/85 text-white flex flex-col items-center justify-center opacity-0 transition-opacity duration-400 p-[1rem] group-hover:opacity-100">
+                    <h4 class="text-[1.1rem] md:text-[1.3rem] mb-[10px]">Staircase Renovation</h4>
+                    <p class="text-[0.85rem] md:text-[0.95rem] leading-[1.4] max-w-[90%]">Modern staircase update with fresh paint, new trim, and refinished steps.</p>
+                </div>
+            </div>
+
+            <div class="work-card group relative w-full rounded-[1rem] overflow-hidden bg-white shadow-card transform translate-y-[30px] opacity-0 transition-all duration-500 hover:-translate-y-[5px] hover:shadow-card-hover">
+                <img src="images/work4.jpg" alt="Bathroom Renovation" class="w-full h-[220px] md:h-[440px] object-cover block transition-transform duration-500 group-hover:scale-105">
+                <div class="card-overlay absolute inset-0 bg-navy/85 text-white flex flex-col items-center justify-center opacity-0 transition-opacity duration-400 p-[1rem] group-hover:opacity-100">
+                    <h4 class="text-[1.1rem] md:text-[1.3rem] mb-[10px]">Bathroom Renovation</h4>
+                    <p class="text-[0.85rem] md:text-[0.95rem] leading-[1.4] max-w-[90%]">Luxury shower installation with sleek glass doors and modern tile work.</p>
+                </div>
+            </div>
+
+            <div class="work-card group relative w-full rounded-[1rem] overflow-hidden bg-white shadow-card transform translate-y-[30px] opacity-0 transition-all duration-500 hover:-translate-y-[5px] hover:shadow-card-hover">
+                <img src="images/work5.jpg" alt="Vanity Upgrade" class="w-full h-[220px] md:h-[440px] object-cover block transition-transform duration-500 group-hover:scale-105">
+                <div class="card-overlay absolute inset-0 bg-navy/85 text-white flex flex-col items-center justify-center opacity-0 transition-opacity duration-400 p-[1rem] group-hover:opacity-100">
+                    <h4 class="text-[1.1rem] md:text-[1.3rem] mb-[10px]">Double Vanity Upgrade</h4>
+                    <p class="text-[0.85rem] md:text-[0.95rem] leading-[1.4] max-w-[90%]">Stylish dual vanity with matte black fixtures and patterned tile flooring.</p>
+                </div>
+            </div>
+
+            <div class="work-card group relative w-full rounded-[1rem] overflow-hidden bg-white shadow-card transform translate-y-[30px] opacity-0 transition-all duration-500 hover:-translate-y-[5px] hover:shadow-card-hover">
+                <img src="images/work6.jpg" alt="Tile Installation" class="w-full h-[220px] md:h-[440px] object-cover block transition-transform duration-500 group-hover:scale-105">
+                <div class="card-overlay absolute inset-0 bg-navy/85 text-white flex flex-col items-center justify-center opacity-0 transition-opacity duration-400 p-[1rem] group-hover:opacity-100">
+                    <h4 class="text-[1.1rem] md:text-[1.3rem] mb-[10px]">Tile Installation</h4>
+                    <p class="text-[0.85rem] md:text-[0.95rem] leading-[1.4] max-w-[90%]">Custom tile flooring installed to elevate the bathroom’s design and durability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const cards = document.querySelectorAll(".work-card");
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+        cards.forEach(card => observer.observe(card));
+    });
+    </script>
+
+    <footer class="bg-navy text-white py-[3rem] px-[1.5rem] pb-[2rem]">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-[2.5rem] max-w-[1100px] mx-auto text-center md:text-left font-outfit text-[1rem]">
+            
+            <div class="text-center md:text-left">
+                <h2 class="text-[1.8rem] font-bold text-white mb-[0.8rem]">RK Construction</h2>
+                <p class="text-[#cfd8e3] text-[1.1rem] leading-[1.6] max-w-[400px] mx-auto md:mx-0 mt-[0.5rem]">
+                    Building trust through quality workmanship and attention to detail. RK Construction turns your vision into reality — on time, on budget, and built to last.
+                </p>
+                <div class="mt-[1rem] flex justify-center md:justify-start flex-wrap">
+                    <!-- ef="#" class="text-white mx-[0.6rem] text-[1.3rem] transition duration-300 hover:text-white"><i class="fab fa-linkedin-in"></i></a> -->
+                </div>
+            </div>
+
+            <div class="text-center md:text-left text-[1rem]">
+                <h3 class="text-[1.2rem] text-white mb-[0.8rem]">Explore</h3>
+                <ul class="list-none p-0 m-0">
+                    <li class="my-[0.5rem] text-[#cfd8e3]"><a href="index.html#about-us" class="text-[#cfd8e3] no-underline transition duration-300 hover:text-white">About Us</a></li>
+                    <li class="my-[0.5rem] text-[#cfd8e3]"><a href="index.html#reviews" class="text-[#cfd8e3] no-underline transition duration-300 hover:text-white">Reviews</a></li>
+                    <li class="my-[0.5rem] text-[#cfd8e3]"><a href="projects.html" class="text-[#cfd8e3] no-underline transition duration-300 hover:text-white">Projects</a></li>
+                    <li class="my-[0.5rem] text-[#cfd8e3]"><a href="contact.html" class="text-[#cfd8e3] no-underline transition duration-300 hover:text-white">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="text-center md:text-left text-[1rem]">
+                <h3 class="text-[1.2rem] text-white mb-[0.8rem]">Contact</h3>
+                <ul class="list-none p-0 m-0">
+                    <li class="my-[0.5rem] text-[#cfd8e3]"><i class="fas fa-phone mr-[0.5rem] text-white"></i> (617) 543-0848</li>
+                    <li class="my-[0.5rem] text-[#cfd8e3]"><i class="fas fa-envelope mr-[0.5rem] text-white"></i> renato@rkconstructionmass.com</li>
+                    <li class="my-[0.5rem] text-[#cfd8e3]"><i class="fas fa-map-marker-alt mr-[0.5rem] text-white"></i> Malborough, MA</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="border-t border-[rgba(255,255,255,0.1)] text-center mt-[2rem] pt-[1rem] text-[0.85rem] text-[#9fb3c8]">
+            <p>© 2025 RK Construction | All Rights Reserved</p>
+        </div>
+    </footer>
+    
+    <script src="search.js"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

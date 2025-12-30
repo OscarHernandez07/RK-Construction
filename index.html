@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RK Construction</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0e2d42',
+                        navyLight: '#1a4c6e',
+                        orange: '#f08740',
+                        orangeLight: '#ffb74d',
+                    },
+                    fontFamily: {
+                        'bogle': ['"BBH Sans Bogle"', 'sans-serif'],
+                        'outfit': ['"Outfit"', 'sans-serif'],
+                        'vietnam': ['"Be Vietnam Pro"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'hero-btn': '0 5px 15px rgba(255, 152, 0, 0.4)',
+                        'hero-btn-hover': '0 8px 25px rgba(255, 152, 0, 0.6)',
+                        'card': '0 4px 10px rgba(0,0,0,0.1)',
+                        'card-hover': '0 6px 15px rgba(0,0,0,0.15)',
+                        'review': '0 10px 25px rgba(0, 0, 0, 0.1)',
+                        'review-hover': '0 20px 35px rgba(0, 0, 0, 0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom animation */
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeInUp {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        
+        /* Service Card Hover Effect */
+        .service-card:hover .service-icon {
+            background-color: #f08740;
+            color: white;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body class="m-0 p-0 font-outfit">
+
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top !bg-navy shadow-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand !text-white !font-vietnam !font-bold !text-[1.2rem] mt-[0.2rem] lg:pl-[3rem] p-0 flex items-center gap-2" href="index.html" alt="Logo">
+                    <i class="bi bi-bricks text-orange"></i> RK Construction
+                </a>
+            
+                <button class="navbar-toggler d-lg-none !bg-navy !border-navy !text-white" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon grayscale invert brightness-200 contrast-150"></span>
+                </button>
+        
+                <div class="offcanvas offcanvas-end !bg-navy" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"> 
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close !bg-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body !p-0 !pl-4 lg:!p-0">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item"><a class="nav-link !text-white font-vietnam font-bold text-[1.1rem] mt-[0.2rem] hover:!text-orange transition-colors" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link !text-white font-vietnam font-bold text-[1.1rem] mt-[0.2rem] hover:!text-orange transition-colors" href="#about-us">About Us</a></li>
+                            <li class="nav-item"><a class="nav-link !text-white font-vietnam font-bold text-[1.1rem] mt-[0.2rem] hover:!text-orange transition-colors" href="#services">Services</a></li>
+                            <li class="nav-item"><a class="nav-link !text-white font-vietnam font-bold text-[1.1rem] mt-[0.2rem] hover:!text-orange transition-colors" href="#reviews">Reviews</a></li>
+                            <li class="nav-item"><a class="nav-link !text-white font-vietnam font-bold text-[1.1rem] mt-[0.2rem] hover:!text-orange transition-colors" href="projects.html">Projects</a></li>
+                            <li class="nav-item"><a class="nav-link !text-white font-vietnam font-bold text-[1.1rem] mt-[0.2rem] hover:!text-orange transition-colors" href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="relative w-full h-[36rem] lg:h-[42rem] bg-center bg-no-repeat bg-cover flex items-center justify-center" 
+         style="background-image: linear-gradient(rgba(14, 45, 66, 0.7), rgba(14, 45, 66, 0.6)), url('images/home-remodeling.avif');">
+        <div class="text-center pt-[3rem]">
+            <div class="text-center px-4 animate-fadeInUp">
+                <h1 class="text-[2.8rem] lg:text-[5.5rem] text-white font-bogle leading-tight">Construction <span class="text-orange">You Can Trust</span></h1>
+            </div>
+            <div class="text-center px-4 mt-4 animate-fadeInUp" style="animation-delay: 0.2s">
+                <p class="text-[1.3rem] lg:text-[2.2rem] text-gray-200 font-outfit font-light">Crafting Your Vision into Reality</p>
+            </div>
+            <div class="text-center pt-[2.5rem] animate-fadeInUp" style="animation-delay: 0.4s">
+                <a href="contact.html" 
+                   class="inline-block bg-gradient-to-br from-orange to-orangeLight text-white border-none text-[1.3rem] font-semibold py-[1rem] px-[3rem] rounded-[50px] cursor-pointer shadow-hero-btn transition-all duration-300 tracking-[0.5px] no-underline hover:from-[#ffa726] hover:to-[#ffa724] hover:shadow-hero-btn-hover active:scale-95">
+                    Get a Free Quote
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white py-[6rem] px-[2rem] text-center" id="about-us">
+        <div class="font-bogle text-navy">
+            <h2 class="text-[2.5rem] md:text-[3.5rem]">Who We Are</h2>
+            <div class="border-2 border-orange w-[6rem] mx-auto my-[1rem] mb-[3rem]"></div>
+        </div>
+
+        <div class="text-[1.2rem] md:text-[1.3rem] font-outfit text-[#555] max-w-[800px] mx-auto mt-[1rem] mb-[4rem] text-center leading-relaxed">
+            <p>RK Construction Services is a family-owned and operated business dedicated to transforming homes with exceptional craftsmanship. With a combined two decades of experience, founders <span class="text-navy font-bold">Renato</span> and <span class="text-navy font-bold">Keila</span> bring a wealth of expertise to every project.</p>
+        </div>
+    
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-[2rem] max-w-[1200px] mx-auto">
+            <div class="bg-white border border-gray-100 rounded-[20px] shadow-card p-[2.5rem] transition-all duration-300 font-outfit hover:-translate-y-2 hover:shadow-card-hover group">
+                <div class="w-20 h-20 mx-auto bg-navy/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-navy transition-colors duration-300">
+                    <i class="bi bi-hammer text-[2.5rem] text-navy group-hover:text-white transition-colors"></i>
+                </div>
+                <h3 class="text-navy mb-[1rem] text-[1.8rem] font-bold">Renato's Craft</h3>
+                <p class="text-[#555] text-[1.1rem] leading-[1.6]">A skilled carpenter with 10+ years of experience, specializing in structural integrity and custom remodeling solutions.</p>
+            </div>
+    
+            <div class="bg-white border border-gray-100 rounded-[20px] shadow-card p-[2.5rem] transition-all duration-300 font-outfit hover:-translate-y-2 hover:shadow-card-hover group">
+                <div class="w-20 h-20 mx-auto bg-orange/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-orange transition-colors duration-300">
+                    <i class="bi bi-brush text-[2.5rem] text-orange group-hover:text-white transition-colors"></i>
+                </div>
+                <h3 class="text-navy mb-[1rem] text-[1.8rem] font-bold">Keila's Touch</h3>
+                <p class="text-[#555] text-[1.1rem] leading-[1.6]">A professional painter delivering meticulous finishes that enhance the beauty and longevity of your walls.</p>
+            </div>
+    
+            <div class="bg-white border border-gray-100 rounded-[20px] shadow-card p-[2.5rem] transition-all duration-300 font-outfit hover:-translate-y-2 hover:shadow-card-hover group">
+                <div class="w-20 h-20 mx-auto bg-navy/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-navy transition-colors duration-300">
+                    <i class="bi bi-shield-check text-[2.5rem] text-navy group-hover:text-white transition-colors"></i>
+                </div>
+                <h3 class="text-navy mb-[1rem] text-[1.8rem] font-bold">Our Promise</h3>
+                <p class="text-[#555] text-[1.1rem] leading-[1.6]">We deliver reliable craftsmanship and lasting results, ensuring every home we touch reflects quality.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-navy py-[6rem] px-[2rem]" id="services">
+        <div class="max-w-[1200px] mx-auto">
+            <div class="text-center mb-[4rem]">
+                <h2 class="text-[2.5rem] md:text-[3.5rem] text-white font-bogle">Our Expertise</h2>
+                <div class="border-2 border-orange w-[6rem] mx-auto my-[1rem]"></div>
+                <p class="text-gray-300 text-[1.2rem] mt-4">Comprehensive construction services tailored to your needs.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-navyLight p-8 rounded-xl border-b-4 border-orange hover:bg-opacity-80 transition duration-300 service-card">
+                    <div class="service-icon w-14 h-14 bg-white text-navy rounded-lg flex items-center justify-center text-2xl mb-6 transition-all duration-500">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="text-white text-xl font-bold mb-3">Full Remodeling</h3>
+                    <p class="text-gray-300 text-sm">Complete home transformations, from open-concept layouts to structural updates.</p>
+                </div>
+
+                <div class="bg-navyLight p-8 rounded-xl border-b-4 border-orange hover:bg-opacity-80 transition duration-300 service-card">
+                    <div class="service-icon w-14 h-14 bg-white text-navy rounded-lg flex items-center justify-center text-2xl mb-6 transition-all duration-500">
+                        <i class="fas fa-paint-roller"></i>
+                    </div>
+                    <h3 class="text-white text-xl font-bold mb-3">Interior & Exterior Painting</h3>
+                    <p class="text-gray-300 text-sm">Flawless finishes using premium paints for walls, trim, siding, and cabinets.</p>
+                </div>
+
+                <div class="bg-navyLight p-8 rounded-xl border-b-4 border-orange hover:bg-opacity-80 transition duration-300 service-card">
+                    <div class="service-icon w-14 h-14 bg-white text-navy rounded-lg flex items-center justify-center text-2xl mb-6 transition-all duration-500">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-white text-xl font-bold mb-3">Additions & Decks</h3>
+                    <p class="text-gray-300 text-sm">Expanding your living space with custom decks, patios, and room additions.</p>
+                </div>
+
+                <div class="bg-navyLight p-8 rounded-xl border-b-4 border-orange hover:bg-opacity-80 transition duration-300 service-card">
+                    <div class="service-icon w-14 h-14 bg-white text-navy rounded-lg flex items-center justify-center text-2xl mb-6 transition-all duration-500">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3 class="text-white text-xl font-bold mb-3">Flooring & Tiling</h3>
+                    <p class="text-gray-300 text-sm">Expert installation of hardwood, vinyl, ceramic, and custom tile work.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-[#fcfcfc] py-[6rem] px-[2rem]">
+        <div class="text-center font-bogle text-navy mb-[4rem]">
+            <h2 class="text-[2.5rem] md:text-[3.5rem]">How We Work</h2>
+            <div class="w-[6rem] h-[3px] bg-orange mx-auto mt-[0.5rem] rounded-[2px]"></div>
+        </div>
+
+        <div class="max-w-[1000px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+            <div class="hidden md:block absolute top-[25px] left-0 w-full h-[2px] bg-gray-200 -z-10"></div>
+
+            <div class="text-center bg-[#fcfcfc]">
+                <div class="w-[50px] h-[50px] bg-orange text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4 border-4 border-[#fcfcfc]">1</div>
+                <h4 class="text-navy text-lg font-bold mb-2">Consultation</h4>
+                <p class="text-gray-500 text-sm px-2">We meet to discuss your vision, budget, and timeline.</p>
+            </div>
+            <div class="text-center bg-[#fcfcfc]">
+                <div class="w-[50px] h-[50px] bg-navy text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4 border-4 border-[#fcfcfc]">2</div>
+                <h4 class="text-navy text-lg font-bold mb-2">Proposal</h4>
+                <p class="text-gray-500 text-sm px-2">You receive a detailed estimate and plan of action.</p>
+            </div>
+            <div class="text-center bg-[#fcfcfc]">
+                <div class="w-[50px] h-[50px] bg-navy text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4 border-4 border-[#fcfcfc]">3</div>
+                <h4 class="text-navy text-lg font-bold mb-2">Construction</h4>
+                <p class="text-gray-500 text-sm px-2">Our team works efficiently with minimal disruption.</p>
+            </div>
+            <div class="text-center bg-[#fcfcfc]">
+                <div class="w-[50px] h-[50px] bg-navy text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4 border-4 border-[#fcfcfc]">4</div>
+                <h4 class="text-navy text-lg font-bold mb-2">Reveal</h4>
+                <p class="text-gray-500 text-sm px-2">Final walkthrough to ensure every detail is perfect.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="py-[4rem] px-[2rem] bg-white">
+        <div class="max-w-[1200px] mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div>
+                    <h2 class="text-[2.5rem] font-bogle text-navy">Recent Projects</h2>
+                    <div class="w-[4rem] h-[3px] bg-orange mt-2"></div>
+                </div>
+                <a href="projects.html" class="mt-4 md:mt-0 text-orange font-bold hover:text-navy transition-colors">View All Projects <i class="fas fa-arrow-right ml-2"></i></a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="group relative overflow-hidden rounded-lg h-[300px] bg-gray-200">
+                    <img src="images/work5.jpg" alt="Kitchen" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <span class="text-white font-bold text-lg">Modern Kitchen Remodel</span>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-lg h-[300px] bg-gray-200">
+                    <img src="images/work.jpeg" alt="Living Room" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <span class="text-white font-bold text-lg">Interior Painting</span>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-lg h-[300px] bg-gray-200">
+                    <img src="images/work6.jpg" alt="Deck" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <span class="text-white font-bold text-lg">Custom Flooring</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] py-[6rem] px-[2rem] text-center relative overflow-hidden" id="reviews">
+    <div class="font-bogle text-navy mb-[1rem]">
+        <h2 class="text-[3rem] relative">Client Stories</h2>
+        <div class="w-[80px] h-[4px] bg-orange mx-auto mt-[0.5rem] rounded-[2px]"></div>
+    </div>
+
+    <div class="text-[1.2rem] font-outfit text-[#555] max-w-[700px] mx-auto mt-[1rem] mb-[4rem] text-center">
+        <p>Our work speaks for itself through the smiles and stories of those we’ve built for.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[2rem] max-w-[1300px] mx-auto">
+        <div class="bg-white p-[2rem] rounded-[20px] shadow-review transition-all duration-300 hover:-translate-y-[10px] hover:shadow-review-hover animate-fadeInUp flex flex-col h-full">
+            <div class="text-orange text-[1rem] mb-[1rem]"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p class="text-[1rem] text-[#555] mb-[1.5rem] italic flex-grow">
+                "We needed to install butcher block for our kitchen counter and this was done incredibly well and in one day. We appreciated this and won’t forget it!"
+            </p>
+            <div class="mt-auto border-t pt-4 text-left">
+                <h4 class="font-[600] text-navy text-sm">Jenn C.</h4>
+                <span class="text-xs text-gray-400">Butcher Block Install</span>
+            </div>
+        </div>
+
+        <div class="bg-white p-[2rem] rounded-[20px] shadow-review transition-all duration-300 hover:-translate-y-[10px] hover:shadow-review-hover animate-fadeInUp flex flex-col h-full">
+            <div class="text-orange text-[1rem] mb-[1rem]"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p class="text-[1rem] text-[#555] mb-[1.5rem] italic flex-grow">
+                "Renato is a professional contractor who takes pride in his work. His response time and communication is phenomenal, and he cleaned up impeccably!"
+            </p>
+            <div class="mt-auto border-t pt-4 text-left">
+                <h4 class="font-[600] text-navy text-sm">Kathy C.</h4>
+                <span class="text-xs text-gray-400">Tile & Flooring</span>
+            </div>
+        </div>
+
+        <div class="bg-white p-[2rem] rounded-[20px] shadow-review transition-all duration-300 hover:-translate-y-[10px] hover:shadow-review-hover animate-fadeInUp flex flex-col h-full">
+            <div class="text-orange text-[1rem] mb-[1rem]"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p class="text-[1rem] text-[#555] mb-[1.5rem] italic flex-grow">
+                "Renato was great to work with and very accommodating. All interior and exterior work was done nicely, matching the existing finishes of the house."
+            </p>
+            <div class="mt-auto border-t pt-4 text-left">
+                <h4 class="font-[600] text-navy text-sm">Dan M.</h4>
+                <span class="text-xs text-gray-400">Mudroom Remodel</span>
+            </div>
+        </div>
+
+        <div class="bg-white p-[2rem] rounded-[20px] shadow-review transition-all duration-300 hover:-translate-y-[10px] hover:shadow-review-hover animate-fadeInUp flex flex-col h-full">
+            <div class="text-orange text-[1rem] mb-[1rem]"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p class="text-[1rem] text-[#555] mb-[1.5rem] italic flex-grow">
+                "I have used RK Construction on several projects. From deck benches to siding replacement, Renato has the skills to do it all at a great price."
+            </p>
+            <div class="mt-auto border-t pt-4 text-left">
+                <h4 class="font-[600] text-navy text-sm">Tim S.</h4>
+                <span class="text-xs text-gray-400">Siding & Custom Decks</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="bg-white py-[5rem] px-4 text-center relative overflow-hidden">
+        <div class="absolute inset-0  opacity-10"></div> <div class="relative z-10 max-w-3xl mx-auto">
+            <h2 class="text-stone-900 font-bogle text-[2.5rem] md:text-[3.5rem] mb-4">Ready to Build Your Dream?</h2>
+            <p class="text-stone-900 text-xl mb-8 font-outfit">Let's discuss your project and make it a reality today.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="bg-navy text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-navy-200 hover:text-navy transition duration-300 shadow-lg">Contact Us</a>
+                <a href="tel:5551234567" class="bg-white text-orange px-8 py-3 rounded-full font-bold text-lg hover:bg-navy hover:text-orange transition duration-300 shadow-lg"><i class="fas fa-phone-alt mr-2"></i> (555) 123-4567</a>
+            </div>
+        </div>
+    </div>
+
+   <footer class="bg-navy text-white py-[3rem] px-[1.5rem] pb-[2rem]">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-[2.5rem] max-w-[1100px] mx-auto text-center md:text-left font-outfit text-[1rem]">
+            
+            <div class="text-center md:text-left">
+                <h2 class="text-[1.8rem] font-bold text-white mb-[0.8rem]">RK Construction</h2>
+                <p class="text-[#cfd8e3] text-[1.1rem] leading-[1.6] max-w-[400px] mx-auto md:mx-0 mt-[0.5rem]">
+                    Building trust through quality workmanship and attention to detail. RK Construction turns your vision into reality — on time, on budget, and built to last.
+                </p>
+                <div class="mt-[1rem] flex justify-center md:justify-start flex-wrap">
+                    <!-- ef="#" class="text-white mx-[0.6rem] text-[1.3rem] transition duration-300 hover:text-white"><i class="fab fa-linkedin-in"></i></a> -->
+                </div>
+            </div>
+
+            <div class="text-center md:text-left text-[1rem]">
+                <h3 class="text-[1.2rem] text-white mb-[0.8rem]">Explore</h3>
+                <ul class="list-none p-0 m-0">
+                    <li class="my-[0.5rem] text-[#cfd8e3]"><a href="index.html#about-us" class="text-[#cfd8e3] no-underline transition duration-300 hover:text-white">About Us</a></li>
+                    <li class="my-[0.5rem] text-[#cfd8e3]"><a href="index.html#reviews" class="text-[#cfd8e3] no-underline transition duration-300 hover:text-white">Reviews</a></li>
+                    <li class="my-[0.5rem] text-[#cfd8e3]"><a href="projects.html" class="text-[#cfd8e3] no-underline transition duration-300 hover:text-white">Projects</a></li>
+                    <li class="my-[0.5rem] text-[#cfd8e3]"><a href="contact.html" class="text-[#cfd8e3] no-underline transition duration-300 hover:text-white">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="text-center md:text-left text-[1rem]">
+                <h3 class="text-[1.2rem] text-white mb-[0.8rem]">Contact</h3>
+                <ul class="list-none p-0 m-0">
+                    <li class="my-[0.5rem] text-[#cfd8e3]"><i class="fas fa-phone mr-[0.5rem] text-white"></i> (617) 543-0848</li>
+                    <li class="my-[0.5rem] text-[#cfd8e3]"><i class="fas fa-envelope mr-[0.5rem] text-white"></i> renato@rkconstructionmass.com</li>
+                    <li class="my-[0.5rem] text-[#cfd8e3]"><i class="fas fa-map-marker-alt mr-[0.5rem] text-white"></i> Malborough, MA</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="border-t border-[rgba(255,255,255,0.1)] text-center mt-[2rem] pt-[1rem] text-[0.85rem] text-[#9fb3c8]">
+            <p>© 2025 RK Construction | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
